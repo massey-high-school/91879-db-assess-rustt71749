@@ -23,7 +23,6 @@
     
     <div class="wrapper">
     
-
         
         <div class="box banner">
             
@@ -35,9 +34,8 @@
             </div>    <!-- / logo -->
         </a>
             
-            <h1>Website Name</h1>
+            <h1>Website</h1>
         </div>    <!-- / banner -->
-
         <!-- Navigation goes here.  Edit BOTH the file name and the link name -->
         <div class="box nav">
             <a href="index.html">Home</a> | 
@@ -53,7 +51,7 @@
         </div>
         
         <div class="box main">
-            <h2>First Page heading</h2>
+            <h2>Welcome</h2>
             
             <p>
                 Sugar plum powder dessert bonbon powder lollipop lollipop muffin I love. Tiramisu dessert I love sugar plum apple pie marzipan chocolate bar brownie. Pudding tiramisu caramels biscuit tiramisu. I love gummies gummies pie sweet pudding I love I love. Donut halvah candy oat cake donut. Caramels wafer danish jelly-o.
@@ -69,11 +67,8 @@
             
         </div>    <!-- / main -->
         
-
         <div class="box footer">
-            CC yourname 20XX
+            CC Trent R 2020
         </div>    <!-- / footer -->
     
     </div>  <!-- / wrapper  -->
-    
-</body>        
