@@ -8,7 +8,7 @@ if(isset($_POST['find_food']))
 // Retrieves food and sanitises it
 $food=test_input(mysqli_real_escape_string($dbconnect, $_POST['food']));
     
-$find_sql="SELECT * FROM `L1_DB_Prac_TreRus` WHERE `Food` LIKE '%$food%' ORDER BY `Food` ASC ";
+$find_sql="SELECT * FROM `L1_DB_assess_TreRus` WHERE `Food` LIKE '%$food%' ORDER BY `food` ASC ";
 $find_query=mysqli_query($dbconnect, $find_sql);
 $find_rs=mysqli_fetch_assoc($find_query);
 $count=mysqli_num_rows($find_query);
@@ -52,9 +52,11 @@ $count=mysqli_num_rows($find_query);
     
         <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
         
-        <p>Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span></p>
+        <p>Course: <span class="sub_heading"><?php echo $find_rs['Course']; ?></span></p>
         
-        <p>Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span></p>
+        <p>Vege: <span class="sub_heading"><?php echo $find_rs['Vege']; ?></span></p>
+        
+        <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
         
         <p>Rating: <span class="sub_heading">
             <?php 
@@ -70,7 +72,7 @@ $count=mysqli_num_rows($find_query);
         
         <p><span class="sub_heading">Review</span></p>
         
-        <p><span class="sub_heading"><?php echo $find_rs['Review']; ?></span></p>
+        <p><span><?php echo $find_rs['Review']; ?></span></p>
         
     </div> <!-- / end results div -->
     

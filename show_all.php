@@ -1,6 +1,6 @@
 <?php include "topbit.php"; 
 
-$showall_sql="SELECT * FROM `L1_DB_Prac_TreRus` ORDER BY `L1_DB_Prac_TreRus`.`Title` ASC ";
+$showall_sql="SELECT * FROM `L1_DB_assess_TreRus` ORDER BY `L1_DB_assess_TreRus`.`Food` ASC ";
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
@@ -42,11 +42,13 @@ $count=mysqli_num_rows($showall_query);
      <!-- Results go here -->
     <div class="results">
     
-        <p>Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span></p>
+        <p>Food: <span class="sub_heading"><?php echo $showall_rs['Food']; ?></span></p>
         
-        <p>Author: <span class="sub_heading"><?php echo $showall_rs['Author']; ?></span></p>
+        <p>Course: <span class="sub_heading"><?php echo $showall_rs['Course']; ?></span></p>
         
-        <p>Genre: <span class="sub_heading"><?php echo $showall_rs['Genre']; ?></span></p>
+        <p>Vege: <span class="sub_heading"><?php echo $showall_rs['Vege']; ?></span></p>
+        
+         <p>Location: <span class="sub_heading"><?php echo $showall_rs['Location']; ?></span></p>
         
         <p>Rating: <span class="sub_heading">
             <?php 
@@ -62,7 +64,7 @@ $count=mysqli_num_rows($showall_query);
         
         <p><span class="sub_heading">Review</span></p>
         
-        <p><span class="sub_heading"><?php echo $showall_rs['Review']; ?></span></p>
+        <p><span> <?php echo $showall_rs['Review']; ?></span></p>
         
     </div> <!-- / end results div -->
     
