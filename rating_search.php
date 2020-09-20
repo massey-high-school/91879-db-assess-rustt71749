@@ -12,19 +12,19 @@ $stars=test_input(mysqli_real_escape_string($dbconnect, $_POST['stars']));
 if ($amount=="exactly")
     
 {
-    $find_sql="SELECT * FROM `L1_DB_Prac_TreRus` WHERE `Rating` = $stars
+    $find_sql="SELECT * FROM `L1_DB_assess_TreRus` WHERE `Rating` = $stars
     ORDER BY `Title` ASC ";
 }
 
 elseif ($amount=="less")
     
 {
-    $find_sql="SELECT * FROM `L1_DB_Prac_TreRus` WHERE `Rating` <= $stars
+    $find_sql="SELECT * FROM `L1_DB_assess_TreRus` WHERE `Rating` <= $stars
     ORDER BY `Title` ASC ";
 }
     
 else {
-    $find_sql="SELECT * FROM `L1_DB_Prac_TreRus` WHERE `Rating` >= $stars
+    $find_sql="SELECT * FROM `L1_DB_assess_TreRus` WHERE `Rating` >= $stars
     ORDER BY `Title` ASC  ";
 }
 
@@ -70,11 +70,13 @@ $count=mysqli_num_rows($find_query);
      <!-- Results go here -->
     <div class="results">
     
-        <p>Title: <span class="sub_heading"><?php echo $find_rs['Title']; ?></span></p>
+        <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
         
-        <p>Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span></p>
+        <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
         
-        <p>Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span></p>
+        <p>Course: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span></p>
+        
+        <p>Vege: <span class="sub_heading"><?php echo $find_rs['Vege']; ?></span></p>
         
         <p>Rating: <span class="sub_heading">
             <?php 
@@ -90,7 +92,7 @@ $count=mysqli_num_rows($find_query);
         
         <p><span class="sub_heading">Review</span></p>
         
-        <p><span class="sub_heading"><?php echo $find_rs['Review']; ?></span></p>
+        <p><span><?php echo $find_rs['Review']; ?></span></p>
         
     </div> <!-- / end results div -->
     

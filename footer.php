@@ -2,7 +2,7 @@
             
     <h2>Search | <a class="side" href="show_all.php">Show All</a></h2>
           
-    <i>Type Part of the Food / Restaurant and then Search</i>
+    <i>Type Part of the Food / Location and then Search</i>
             
     <hr />
             
@@ -10,51 +10,51 @@
             
     <form method="post" action="food_search.php" enctype="multipart/form-data">
      
-        <input class="search" type="text" name="title" size="40" value="" required placeholder="Food..."   />
+        <input class="search" type="text" name="food" size="40" value="" required placeholder="Food..."   />
             
         <input class="submit" type="submit" name="find_food" 
             value="&#xf002;" />
         
     </form>
      
-    <!-- End of Title Search -->
+    <!-- End of Food Search -->
      
      <br />
      
-    <!-- Start of Author Search -->
+    <!-- Start of Location Search -->
             
-    <form method="post" action="author_search.php" enctype="multipart/form-data">
+    <form method="post" action="location_search.php" enctype="multipart/form-data">
      
-        <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..."   />
+        <input class="search" type="text" name="location" size="40" value="" required placeholder="Location..."   />
             
-        <input class="submit" type="submit" name="find_author" 
+        <input class="submit" type="submit" name="find_location" 
             value="&#xf002;" />
         
     </form>
      
-    <!-- End of Author Search -->
+    <!-- End of Location Search -->
      
      <hr />
      
-     <i>Use the Dropdown Menus to Search by Genre or Rating</i>
+     <i>Use the Dropdown Menus to Search by Course, Vegetarian, or Rating</i>
      
-    <!-- Start of Genre Search -->
+    <!-- Start of Course Search -->
             
-    <form method="post" action="genre_search.php" enctype="multipart/form-data">
+    <form method="post" action="course_search.php" enctype="multipart/form-data">
         
-        <select name="genre" required>
+        <select name="course" required>
             <option value="" disabled selected>Genre...</option>
-            <option value="Sci Fi">Science Fiction</option>
-            <option value="Historical Fiction">Historical Fiction</option>
-            <option value="Humour">Humour</option>
-            <option value="Non Fiction">Non Fiction</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            
         </select>
         
-         <input class="submit" type="submit" name="find_genre" 
+         <input class="submit" type="submit" name="find_course" 
                        value="&#xf002;" />
     </form>
      
-    <!-- End of Genre Search -->
+    <!-- End of Course Search -->
      
 <hr />
 

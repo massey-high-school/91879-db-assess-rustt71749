@@ -55,13 +55,6 @@ color: #fff
     grid-area: banner;
 }
 
-.nav {
-    grid-area: nav;
-    background-color: #4A5240;  /* rifle green */
-    font-size: 150%;
-    text-align: center;
-}
-
 .side {
     grid-area: side;
     background-color: #FF8CC6; /*  */
@@ -152,13 +145,13 @@ form {
     position: relative;
     width: 30px;
     left: -1px;
-    background-color: #DB5461; /* indian red */
-    color: #ffe0ed; /* pale pink */
+    background-color: #53395d; /* dark purple */
+    color: #fff; /* white */
     border-radius: 0 5px 5px 0;
 }
 
 input[type="submit"]:hover {
-    background-color: #8a1737; /* dark red */
+    background-color: #7BCDBA; /* middle blue green */
 }
 
 input {
