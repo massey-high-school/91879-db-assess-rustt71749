@@ -52,11 +52,26 @@ $count=mysqli_num_rows($find_query);
     
         <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
         
+        <?php
+        
+       if ($find_rs['Vege']== 'y')
+        
+        {
+        
+        ?>
+        
+        <i>This dish is vegetarian</i>
+        
+        <?php
+           
+        }
+         
+        ?>
+        
+        
         <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
         
         <p>Course: <span class="sub_heading"><?php echo $find_rs['Course']; ?></span></p>
-        
-        <p>Vege: <span class="sub_heading"><?php echo $find_rs['Vege']; ?></span></p>
         
         <p>Rating: <span class="sub_heading">
             <?php 

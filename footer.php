@@ -36,7 +36,7 @@
      
      <hr />
      
-     <i>Use the Dropdown Menus to Search by Course, Vegetarian, or Rating</i>
+     <i>Use the Dropdown Menus to Search by Course or Rating</i>
      
      <br />
      

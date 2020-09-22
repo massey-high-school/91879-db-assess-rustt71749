@@ -36,7 +36,7 @@ $count=mysqli_num_rows($showall_query);
     else{
         
         do{
-            
+    
         ?>
     
      <!-- Results go here -->
@@ -44,9 +44,23 @@ $count=mysqli_num_rows($showall_query);
     
         <p>Food: <span class="sub_heading"><?php echo $showall_rs['Food']; ?></span></p>
         
-        <p>Course: <span class="sub_heading"><?php echo $showall_rs['Course']; ?></span></p>
+             <?php
         
-        <p>Vege: <span class="sub_heading"><?php echo $showall_rs['Vege']; ?></span></p>
+       if ($showall_rs['Vege']== 'y')
+        
+        {
+        
+        ?>
+        
+        <i>This dish is vegetarian</i>
+        
+        <?php
+           
+        }
+         
+        ?>
+        
+        <p>Course: <span class="sub_heading"><?php echo $showall_rs['Course']; ?></span></p>
         
          <p>Location: <span class="sub_heading"><?php echo $showall_rs['Location']; ?></span></p>
         
