@@ -38,12 +38,14 @@
      
      <i>Use the Dropdown Menus to Search by Course, Vegetarian, or Rating</i>
      
+     <br />
+     
     <!-- Start of Course Search -->
             
     <form method="post" action="course_search.php" enctype="multipart/form-data">
         
         <select name="course" required>
-            <option value="" disabled selected>Genre...</option>
+            <option value="" disabled selected>Course...</option>
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="Dinner">Dinner</option>
