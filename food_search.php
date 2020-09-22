@@ -1,10 +1,7 @@
 <?php include "topbit.php"; 
-
 // if  button pushed
 if(isset($_POST['find_food']))
-
 {
-
 // Retrieves food and sanitises it
 $food=test_input(mysqli_real_escape_string($dbconnect, $_POST['food']));
     
@@ -12,7 +9,6 @@ $find_sql="SELECT * FROM `L1_DB_assess_TreRus` WHERE `Food` LIKE '%$food%' ORDER
 $find_query=mysqli_query($dbconnect, $find_sql);
 $find_rs=mysqli_fetch_assoc($find_query);
 $count=mysqli_num_rows($find_query);
-
 ?>
         
 <div class="box main">
@@ -49,29 +45,31 @@ $count=mysqli_num_rows($find_query);
     
      <!-- Results go here -->
     <div class="results">
-    
+
         <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
-        
+
         <?php
-        
+
        if ($find_rs['Vege']== 'y')
-        
+
         {
-        
+
         ?>
-        
+
         <i>This dish is vegetarian</i>
-        
+
         <?php
-           
+
         }
-         
+
         ?>
-        
+
         <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
-        
+
         <p>Course: <span class="sub_heading"><?php echo $find_rs['Course']; ?></span></p>
-        
+
+        <p>Vege: <span class="sub_heading"><?php echo $find_rs['Vege']; ?></span></p>
+
         <p>Rating: <span class="sub_heading">
             <?php 
             for ($x=0; $x < $find_rs['Rating']; $x++)
