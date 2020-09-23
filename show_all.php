@@ -42,9 +42,7 @@ $count=mysqli_num_rows($showall_query);
      <!-- Results go here -->
     <div class="results">
     
-        <p>Food: <span class="sub_heading"><?php echo $showall_rs['Food']; ?></span></p>
-        
-             <?php
+        <?php
         
        if ($showall_rs['Vege']== 'y')
         
@@ -52,13 +50,16 @@ $count=mysqli_num_rows($showall_query);
         
         ?>
         
-        <i>This dish is vegetarian</i>
+        <b><i>This dish is vegetarian</i></b>
         
         <?php
            
         }
          
         ?>
+        
+        
+        <p>Food: <span class="sub_heading"><?php echo $showall_rs['Food']; ?></span></p>
         
         <p>Course: <span class="sub_heading"><?php echo $showall_rs['Course']; ?></span></p>
         

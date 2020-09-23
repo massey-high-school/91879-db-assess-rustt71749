@@ -49,7 +49,7 @@
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="Dinner">Dinner</option>
-            
+            <option value="Dessert">Dessert</option>
         </select>
         
          <input class="submit" type="submit" name="find_course" 

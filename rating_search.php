@@ -70,9 +70,7 @@ $count=mysqli_num_rows($find_query);
      <!-- Results go here -->
     <div class="results">
     
-        <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
-        
-       <?php
+         <?php
         
        if ($find_rs['Vege']== 'y')
         
@@ -80,13 +78,15 @@ $count=mysqli_num_rows($find_query);
         
         ?>
         
-        <i>This dish is vegetarian</i>
+        <b><i>This dish is vegetarian</i></b>
         
         <?php
            
         }
          
         ?>
+        
+        <p>Food: <span class="sub_heading"><?php echo $find_rs['Food']; ?></span></p>
         
         <p>Location: <span class="sub_heading"><?php echo $find_rs['Location']; ?></span></p>
         
